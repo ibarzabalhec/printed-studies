@@ -238,11 +238,32 @@ body:not(.showing) .prog{display:none}
 .wxt td.k{width:11rem;font:700 12px/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);padding-top:16px}
 .wxt td p{margin:0 0 8px;font-size:15px;line-height:1.5;color:var(--ink)}
 .wxt td .hd{display:none}
-.wnote{display:grid;grid-template-columns:11rem minmax(0,1fr);gap:6px 20px;padding:16px 0;border-bottom:1px solid var(--rule);max-width:66rem}
+.wnote{display:grid;grid-template-columns:11rem minmax(0,1fr);gap:6px 0;padding:16px 0;border-bottom:1px solid var(--rule);max-width:66rem}
+.wnote>.lab{padding-right:20px}
 .wnote p{margin:0 0 8px;font-size:15px;line-height:1.55;color:var(--ink);max-width:74ch}
+/* dense specs and sources sit behind a disclosure, closed by default (the Rolodex's mono summary, with a caret) */
+.dsc>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font:600 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);padding:10px 0;border-radius:2px}
+.dsc>summary::-webkit-details-marker{display:none}
+.dsc>summary:hover{color:var(--ink)}
+.dsc>summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.dsc>summary svg{width:10px;height:10px;flex:none;transition:transform .2s ease}
+.dsc[open]>summary svg{transform:rotate(90deg)}
+.dsc .dbody{padding:2px 0 8px;display:flex;flex-direction:column;gap:10px}
+.dsc .dbody p{margin:0}
+.wsec+.dsc{margin-top:6px}
+.dsc .wcap{margin:0}
+.wxt{table-layout:fixed}
+.wxt col.ck{width:11rem}
+.wxt td p.sh,.wnote p.sh{margin:0;font:500 18px/1.35 var(--sans);letter-spacing:-.01em;color:var(--ink)}
+.wxt tr.wr td{border-bottom:0;padding-bottom:0}
+.wxt tr.wdx td{padding-top:0;padding-bottom:6px;padding-right:0}
+.wdg>div>p{margin:0 0 8px}
+.wdg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.wdg>div{padding-right:20px;min-width:0}
+.wn2{margin:10px 0 0}
 @media (max-width:760px){.wx{grid-template-columns:1fr;gap:8px;padding:26px 0}.wsec{grid-template-columns:1fr}
-  .wxt thead{display:none}.wxt tr{display:block;border-bottom:1px solid var(--rule);padding:12px 0}.wxt td{display:block;border:0;padding:4px 0 6px}
-  .wxt td.k{width:auto;padding-top:0;color:var(--ink)}.wxt td .hd{display:block;font:600 11px/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin:6px 0 3px}
+  .wxt,.wxt tbody{display:block}.wxt colgroup{display:none}.wxt thead{display:none}.wxt tr{display:block;border-bottom:1px solid var(--rule);padding:12px 0}.wxt td{display:block;border:0;padding:4px 0 6px}
+  .wxt td.k{width:auto;padding-top:0;color:var(--ink)}.wxt tr.wr{border-bottom:0;padding-bottom:0}.wxt tr.wdx{padding-top:0}.wxt tr.wdx td:first-child{display:none}.wdg{grid-template-columns:1fr}.wdg>div{padding-right:0}.wxt td .hd{display:block;font:600 11px/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin:6px 0 3px}
   .wnote{grid-template-columns:1fr}}
 .adds{list-style:none;margin:0;padding:0}
 .add{display:grid;grid-template-columns:minmax(11rem,15rem) minmax(0,1fr);gap:12px 40px;padding:34px 0;border-bottom:1px solid var(--rule)}
@@ -325,7 +346,7 @@ body:not(.showing) .prog{display:none}
 </div>
 
 <script>
-window.__DATA__ = {"mode":"client","title":"Westin Homes","communities":[{"id":"westin-homes","name":"Westin Homes","firm":{"name":"Westin Homes","short":"Westin","type":"homebuilder","region":"Houston"},"developer":"Westin Homes","place":"Houston and Austin, Texas","region":"Houston","sources":{"communities":{"n":"Westin Homes, Houston communities","u":"https://www.westin-homes.com/communities/houston"},"about":{"n":"Westin Homes, about","u":"https://www.westin-homes.com/about"},"builder":{"n":"Builder, Westin Homes","u":"https://www.builderonline.com/firms/westin-homes/"},"legacy":{"n":"Hillwood Communities, Legacy","u":"https://www.hillwoodcommunities.com/lifestyle-communities/legacy/"}},"title":{"line":"Printed homes for *Westin Homes.*","sub":"The homes, sections and sales center a printer could build, then how one printer builds them.","meta":["Homebuilder","Houston and Austin"],"src":["about","communities"],"scene":"home"},"facts":[{"k":"Houston communities","v":"28","src":"communities"},{"k":"Lots","v":"40 to 70 ft","src":"communities"},{"k":"Homes","v":"2,194 to 4,500 sq ft","src":"communities"},{"k":"2025 closings","v":"1,062","src":"builder"}],"dream":[{"cat":"homes","lab":"Homes","scene":"homes","line":"Single-story and two-story homes of *printed rooms,* under the printer's 27 ft limit.","data":["ICON: \u003cb>2,500 sq ft\u003c/b> in under \u003cb>7 days\u003c/b>","Max print height \u003cb>27 ft\u003c/b>","Westin homes to \u003cb>4,500 sq ft\u003c/b>","key"],"src":["tech","specs","communities"]},{"cat":"neighborhood","lab":"Sections","scene":"street","opts":{"lots":[40,50,60,70,55,65]},"line":"A printed section on *40 to 70 ft lots,* the widths Westin builds on.","data":["Print area \u003cb>40 × 100 ft\u003c/b> per setup","Houston communities \u003cb>28\u003c/b>"],"src":["specs","communities"]},{"cat":"buildings","lab":"Sales center and walls","scene":"sales","opts":{"wall":true},"line":"A sales center of *three printed rooms,* behind a garden wall that curves without formwork.","data":["key"],"src":["eth"]}],"value":{"scaleV":"1,062","scaleL":"Westin closings in 2025, Houston and Austin","src":["builder"]},"ask":{"line":"One conversation with *your team* about one printed section."},"climate":{"line":"Houston and Austin: Harvey dropped 36 to 48 inches of rain on the Houston metro in 2017, and Beryl's gusts reached 97 mph in Brazoria County in 2024. Austin sits in the region known as Flash Flood Alley, and had 90 days at or above 100°F in 2011. Formosan termites are found in Harris, Fort Bend and Travis counties.","src":["harvey","beryl","nwsAus","formosan"]},"fit":{"line":"What Westin builds, *and its printed version.*","rows":[{"add":"product","their":"28 Houston communities","what":"From Kresston in Magnolia to Harvest Green in Richmond, on 40 to 70 ft lots.","src":["communities"],"scene":"street","opts":{"lots":[40,50,60,70,55,65]},"printed":"A section of *printed homes* on the same lots.","caps":["week","area"]},{"add":"hybrid","their":"Homes to 4,500 sq ft","what":"Plans from 2,194 to 4,500 sq ft, priced from $349,623.","src":["communities"],"scene":"home2","printed":"Two printed stories *under the 27 ft limit.*","caps":["height","story"]},{"add":"product","their":"Legacy, League City","what":"A 60 ft section in Hillwood's Legacy, one of its ten builders.","src":["communities","legacy"],"scene":"home","printed":"A home of *linked printed rooms,* its garden walls from the same machine.","caps":["week","fire"]},{"add":"own","their":"1,062 closings in 2025","what":"Houston and Austin together.","src":["builder"],"scene":"year","printed":"One Titan at one home a week: *about 50 homes a year,* our arithmetic.","caps":["week","hours"]}]}}],"home":"https://ibarzabalhec.github.io/","date":"2026-09-29"};
+window.__DATA__ = {"mode":"client","title":"Westin Homes","communities":[{"id":"westin-homes","name":"Westin Homes","firm":{"name":"Westin Homes","short":"Westin","type":"homebuilder","region":"Houston"},"developer":"Westin Homes","place":"Houston and Austin, Texas","region":"Houston","sources":{"communities":{"n":"Westin Homes, Houston communities","u":"https://www.westin-homes.com/communities/houston"},"about":{"n":"Westin Homes, about","u":"https://www.westin-homes.com/about"},"builder":{"n":"Builder, Westin Homes","u":"https://www.builderonline.com/firms/westin-homes/"},"legacy":{"n":"Hillwood Communities, Legacy","u":"https://www.hillwoodcommunities.com/lifestyle-communities/legacy/"}},"title":{"line":"Printed homes for *Westin Homes.*","sub":"The homes, sections and sales center a printer could build, then how one printer builds them.","meta":["Homebuilder","Houston and Austin"],"src":["about","communities"],"scene":"home"},"facts":[{"k":"Houston communities","v":"28","src":"communities"},{"k":"Lots","v":"40 to 70 ft","src":"communities"},{"k":"Homes","v":"2,194 to 4,500 sq ft","src":"communities"},{"k":"2025 closings","v":"1,062","src":"builder"}],"dream":[{"cat":"homes","lab":"Homes","scene":"homes","line":"Single-story and two-story homes of *printed rooms,* under the printer's 27 ft limit.","data":["ICON: \u003cb>2,500 sq ft\u003c/b> in under \u003cb>7 days\u003c/b>","Max print height \u003cb>27 ft\u003c/b>","Westin homes to \u003cb>4,500 sq ft\u003c/b>","key"],"src":["tech","specs","communities"]},{"cat":"neighborhood","lab":"Sections","scene":"street","opts":{"lots":[40,50,60,70,55,65]},"line":"A printed section on *40 to 70 ft lots,* the widths Westin builds on.","data":["Print area \u003cb>40 × 100 ft\u003c/b> per setup","Houston communities \u003cb>28\u003c/b>"],"src":["specs","communities"]},{"cat":"buildings","lab":"Sales center and walls","scene":"sales","opts":{"wall":true},"line":"A sales center of *three printed rooms,* behind a garden wall that curves without formwork.","data":["key"],"src":["eth"]}],"value":{"scaleV":"1,062","scaleL":"Westin closings in 2025, Houston and Austin","src":["builder"]},"ask":{"line":"One conversation with *your team* about one printed section."},"climate":{"short":"Houston and Austin: Harvey's rain, Beryl's 97 mph gusts, Flash Flood Alley, Formosan termites.","line":"Houston and Austin: Harvey dropped 36 to 48 inches of rain on the Houston metro in 2017, and Beryl's gusts reached 97 mph in Brazoria County in 2024. Austin sits in the region known as Flash Flood Alley, and had 90 days at or above 100°F in 2011. Formosan termites are found in Harris, Fort Bend and Travis counties.","src":["harvey","beryl","nwsAus","formosan"]},"fit":{"line":"What Westin builds, *and its printed version.*","rows":[{"add":"product","their":"28 Houston communities","what":"From Kresston in Magnolia to Harvest Green in Richmond, on 40 to 70 ft lots.","src":["communities"],"scene":"street","opts":{"lots":[40,50,60,70,55,65]},"printed":"A section of *printed homes* on the same lots.","caps":["week","area"]},{"add":"hybrid","their":"Homes to 4,500 sq ft","what":"Plans from 2,194 to 4,500 sq ft, priced from $349,623.","src":["communities"],"scene":"home2","printed":"Two printed stories *under the 27 ft limit.*","caps":["height","story"]},{"add":"product","their":"Legacy, League City","what":"A 60 ft section in Hillwood's Legacy, one of its ten builders.","src":["communities","legacy"],"scene":"home","printed":"A home of *linked printed rooms,* its garden walls from the same machine.","caps":["week","fire"]},{"add":"own","their":"1,062 closings in 2025","what":"Houston and Austin together.","src":["builder"],"scene":"year","printed":"One Titan at one home a week: *about 50 homes a year,* our arithmetic.","caps":["week","hours"]}]}}],"home":"https://ibarzabalhec.github.io/","date":"2026-09-29"};
 </script>
 <script>
 (function(){
@@ -692,28 +713,29 @@ const MACHINE={act:"The plan",lab:"The machine",scene:"system",line:"A printer l
 /* how a printed wall handles weather, heat and moisture, next to a wood-framed wall. Shared ICON facts follow the Claims
    Register (F8, F16 to F21). Every cell carries its source; a cell with no published figure says so */
 const WX={lab:"Weather, heat and moisture",t:"How a printed wall handles *weather, heat and moisture*",
-  d:"ICON's printed wall next to a wood-framed wall, row by row. Every figure has its source. Where no figure is published, the cell says so.",
+  d:"ICON's printed wall next to a wood-framed wall, row by row.",d2:"Every figure has its source. Where no figure is published, the cell says so.",
   line:"How a printed wall handles *weather, heat and moisture,* next to a wood-framed wall.",
   stats:[["100 psf","wind load, consistent with a 175 mph design wind speed"],["R-18","for a 10 ft wall, with foam between the shells"],["178 min","in a fire test, rated 2 hours for design"],["1.15 perm","a Class III vapor retarder"]],
   rows:[
-    {k:"Wind and flying debris",
+    {k:"Wind and flying debris",ps:"100 psf wind load, impact tests passed",fs:"A 2x4 at 52 to 54 mph went through",
       p:["Meets Florida's High-Velocity Hurricane Zone rules for wind loads up to 100 psf, consistent with Miami-Dade's 175 mph design wind speed. Passed large-missile impact tests without penetration.",["icWall","wall"]],
       f:["In Texas Tech tests for NIST, a 15 lb 2x4 fired at 52 to 54 mph went through stud walls faced with plywood, siding or stucco. It went through brick veneer on studs at 69 mph.",["ttu"]]},
-    {k:"Heat",
+    {k:"Heat",ps:"R-18",fs:"R-13 required",
       p:["R-18 for a 10 ft wall with cores 4 ft apart and a wood top plate, and R-9 to R-18.5 across ICON's configurations. The insulation is open-cell spray foam between the two concrete shells. In an MIT model, a printed home had 2% to 9% lower operating carbon than a framed one, by climate.",["icWall","icPerf","mit"]],
       f:["Texas code asks for R-13 in the stud cavity in climate zone 2, which takes in Harris, Fort Bend, Brazoria, Galveston and Travis counties. A mass wall there needs R-4 to R-6.",["esl"]]},
-    {k:"Moisture and flooding",
+    {k:"Moisture and flooding",ps:"1.15 perm, passed a wind-driven rain test",fs:"OSB, drywall and batts not flood damage-resistant",
       p:["The printed concrete is a Class III vapor retarder (1.15 perm) and passed a wind-driven rain test. ICON says it has no organic material for mold to feed on. FEMA rates concrete as flood damage-resistant, and open-cell foam, the wall's insulation, as not.",["icPerf","icWall","fema"]],
       f:["FEMA rates solid lumber as flood damage-resistant, and OSB, paper-faced drywall and fiberglass batts as not. EPA: dry wet materials within 24 to 48 hours to keep mold from growing.",["fema","epa"]]},
-    {k:"Termites, rot and upkeep",
+    {k:"Termites, rot and upkeep",ps:"No structural wood near the foundation",fs:"About a 70% chance of termite damage in 25 years",
       p:["No structural wood framing near the foundation, ICON says. Passed freeze-thaw testing. Exterior coatings must let vapor through, at least 50 perms, and an exposed wall needs a clear sealant. No service life published.",["icPerf"]],
       f:["In Texas, subterranean termites cause about $500 million in damage a year. An unprotected home has about a 70% chance of termite damage within 25 years, Texas A&M says.",["termTX"]]},
-    {k:"Fire",
+    {k:"Fire",ps:"178 min fire test",fs:"1 hour, 5/8 in drywall both sides",
       p:["178 minutes in an ASTM E119 fire test as a load-bearing wall, specified as a 2-hour fire-rated assembly for design.",["icWall","wall"]],
       f:["One hour for a 2x4 stud wall with 5/8 in. Type X drywall on both sides, in a wood industry detail.",["apa"]]},
-    {k:"Sound",
+    {k:"Sound",ps:"No STC published",fs:"STC 35, or 38 with batts",
       p:["No sound rating (STC) published. ICON says the mass wall isolates sound without added material.",["icPerf"]],
       f:["STC 35 for a 2x4 wall with 1/2 in. drywall on each side, and STC 38 with R-13 batts, in an insulation maker's guide.",["jm"]]}],
+  lims:"Roofs, windows and doors stay conventional. Also: cracking, case-by-case approval, cost.",
   lim:["The printer builds walls. Roofs, windows and doors are conventional, and in a HUD test of a printed wall, water came in around a window after 10 minutes. Printed concrete shrinks and can crack: ICON's guide sets control joints and paints over shrinkage cracks, and lab tests find weak planes at cold joints between layers. Most printed buildings in the U.S. have been approved case by case, as an alternative method. Construction Physics estimated ICON's walls at 2 to 4 times the cost of a framed wall in April 2024.",["hud","icPerf","glotz","cp"]]};
 const WX_SRC=[...new Set(WX.rows.flatMap(r=>[...r.p[1],...r.f[1]]).concat(WX.lim[1]))];
 const ALSO={amenities:["program","ramada","club"],infra:["program","encl","bus","screen"],system:["curve","wall","layer"],homes:["home","home2"],edges:["look","sign","screen"],buildings:["club","sales","ramada"],places:["markers","guides","trail","bus","honey"],neighborhood:["street"],street:["neighborhood"],sales:["screen"],yearrec:["year","record"]};
@@ -723,7 +745,7 @@ function stepsFor(c){autoPlan(c);
   st.push(Object.assign({},MACHINE));
   const cl=c.climate||{};
   st.push({act:"The plan",lab:WX.lab,scene:"wallsec",layout:"text",line:WX.line,stats:WX.stats,srcRight:true,
-    note:(cl.line?cl.line+" ":"")+"The wood-framed wall, row by row with its sources, is on the Fit page.",src:["icWall","icPerf","wall"].concat(cl.src||[]).filter((k,i,a)=>a.indexOf(k)===i),wx:true});
+    note:cl.short||cl.line||"",more:[cl.line||"","The wood-framed wall, row by row with its sources, is on the Fit page."].filter(Boolean),src:["icWall","icPerf","wall"].concat(cl.src||[]).filter((k,i,a)=>a.indexOf(k)===i),wx:true});
   const v=c.value||{};
   st.push({act:"The plan",lab:"The math and the record",layout:"text",scene:"yearrec",line:"Titan and its pump cost $899K. *ICON says it prints a 2,500 sq ft home in under seven days.*",
     stats:[["$899K","Titan and pump"],["Under 7 days","a 2,500 sq ft home, per ICON"],["$20","per sq ft, ICON's target for wall systems"]].concat(v.scaleV?[[v.scaleV,v.scaleL]]:[]),
@@ -760,6 +782,9 @@ function frameFor0(layout){
   if(layout==="plan"||layout==="ask")return {top:.11,bot:pb(.6),l:.22,r:.95};
   const b=pb(.62);return {hz:Math.min(.45,b-.14),top:.09,bot:b,l:.06,r:.94,center:true};
 }
+/* print shows every disclosure open */
+addEventListener("beforeprint",()=>document.querySelectorAll("details.dsc:not([open])").forEach(d=>{d.open=true;d.dataset.po="1";}));
+addEventListener("afterprint",()=>document.querySelectorAll("details[data-po]").forEach(d=>{d.open=false;delete d.dataset.po;}));
 function measurePanel(){const r=panel.getBoundingClientRect(),bb=document.querySelector(".bar").getBoundingClientRect();
   const pt=Math.round(r.top),b2=Math.round(bb.bottom);if(Math.abs(pt-PANEL_T)>2||b2!==BAR_B){PANEL_T=pt;BAR_B=b2;fitCache.clear();requestDraw();}}
 function frameFor(layout,sc){const f0=frameFor0(layout);if(sc&&sc.hzShift&&f0.hz!==undefined){const f=Object.assign({},f0);f.hz=Math.max(f.top+.1,f.hz+sc.hzShift);return f;}return f0;}
@@ -1056,12 +1081,15 @@ function drawPlan(comm,fr,prog,alpha,zoom,dim){
 
 /* ================= Show state ================= */
 const panel=document.getElementById("panel");
+panel.addEventListener("toggle",()=>setTimeout(measurePanel,30),true);
 let COMM=null,STEPS=[],LAST=0,SCN={};const PLANHIT=[];let planHover=-1,fromSite=null;
 function sceneFor(st){if(!st.scene||st.scene==="layer"||st.scene==="plan")return null;const k=st.scene+JSON.stringify(st.opts||{});if(!SCN[k])SCN[k]=LIB[st.scene](st.opts||{});return {key:k,sc:SCN[k]};}
 function esc(t){return String(t).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));}
 function two(t){return esc(t).replace(/\*([^*]+)\*/g,"<strong>$1</strong>");}
 const EXT='<svg class="ext" viewBox="0 0 10 10" aria-hidden="true"><path d="M3 1h6v6M9 1L1 9" fill="none" stroke="currentColor" stroke-width="1.1"/></svg>';
 function srcLinks(keys,c){if(!keys||!keys.length)return [];return keys.map(k=>{const s=srcOf(c,k);return s?`<a class="src" href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.n)}${EXT}</a>`:"";}).filter(Boolean);}
+const CARET='<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M3 1.5 6.5 5 3 8.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>';
+function dsc(label,body,cls){return `<details class="dsc${cls?" "+cls:""}"><summary>${CARET}${esc(label)}</summary><div class="dbody">${body}</div></details>`;}
 function srcHTML(keys,c){const l=srcLinks(keys,c);return l.length?`<p class="figsrc"><span class="lab">Source${l.length>1?"s":""}</span>${l.join("")}</p>`:"";}
 /* the one footer line (Rolodex footer form), and the byline */
 const BYLINE="Prepared by Héctor Ibarzábal · ibarzabalhec@gmail.com";
@@ -1089,7 +1117,9 @@ function panelHTML(st){
         +STEPS.map((x,idx)=>({x,idx})).filter(o=>o.x.cat&&c.plan.at[o.x.cat]).map(o=>`<li><button class="lg" type="button" data-go="${o.idx}"><i>${String(o.idx).padStart(2,"0")}</i>${esc(o.x.lab)}</button></li>`).join("")+`</ul>`;}
     if(st.note)rc+=`<p class="note">${esc(st.note)}</p>`;
     if(st.by)rc+=`<p class="foot note">${footLine(c)}</p>`;
-    rc+=st.srcRight?srcHTML(st.src,c):`<div class="srcm">${srcHTML(st.src,c)}</div>`;
+    const nS=srcLinks(st.src,c).length;
+    rc+=st.srcRight&&(st.more||nS>3)?dsc(st.more?"Details and sources":`Sources, ${nS}`,(st.more||[]).map(t=>`<p class="note">${esc(t)}</p>`).join("")+srcHTML(st.src,c),"pdsc")
+      :st.srcRight?srcHTML(st.src,c):`<div class="srcm">${srcHTML(st.src,c)}</div>`;
   }
   return `<div class="lc">${lc}</div><div class="rc">${rc}</div>`+navHTML();
 }
@@ -1142,13 +1172,13 @@ window.addEventListener("wheel",e=>{if(!showOn)return;e.preventDefault();const n
   wheelAcc+=Math.abs(e.deltaY)>Math.abs(e.deltaX)?e.deltaY:e.deltaX;if(Math.abs(wheelAcc)>36){wheelLock=true;wheelAcc>0?forward():back();wheelAcc=0;}},{passive:false});
 const showEl=document.getElementById("show");
 showEl.addEventListener("touchstart",e=>{const t=e.changedTouches[0];tx=t.clientX;ty=t.clientY;},{passive:true});
-showEl.addEventListener("touchend",e=>{if(e.target.closest("a,button"))return;const t=e.changedTouches[0],dx=t.clientX-tx,dy=t.clientY-ty;
+showEl.addEventListener("touchend",e=>{if(e.target.closest("a,button,summary"))return;const t=e.changedTouches[0],dx=t.clientX-tx,dy=t.clientY-ty;
   /* a panel taller than the screen scrolls; a sideways swipe still turns the step, and so does a vertical swipe once the panel is at its end */
   if(panel.scrollHeight>panel.clientHeight+2&&e.target.closest("#panel")&&Math.abs(dy)>=Math.abs(dx)){const atEnd=panel.scrollTop+panel.clientHeight>=panel.scrollHeight-2,atTop=panel.scrollTop<=1;if(!((dy<-30&&atEnd&&panelEndSeen)||(dy>30&&atTop&&panelTopSeen))){panelEndSeen=atEnd;panelTopSeen=atTop;return;}}if(Math.max(Math.abs(dx),Math.abs(dy))<30){if(STEPS[cur]&&STEPS[cur].site&&!e.target.closest("#panel")){const h=hitPlan(t.clientX,t.clientY);if(h>=0)goSite(h);}return;}(Math.abs(dx)>Math.abs(dy)?-dx:-dy)>0?forward():back();},{passive:true});
-showEl.addEventListener("click",e=>{if(e.target.closest("a,button,.figsrc"))return;if(e.pointerType==="touch")return;
+showEl.addEventListener("click",e=>{if(e.target.closest("a,button,.figsrc,details"))return;if(e.pointerType==="touch")return;
   if(STEPS[cur]&&STEPS[cur].site){if(e.target.closest("#panel"))return;const t=hitPlan(e.clientX,e.clientY);if(t>=0)goSite(t);return;}forward();});
 showEl.addEventListener("mousemove",e=>{if(!STEPS[cur]||!STEPS[cur].site)return;const t=e.target.closest("#panel")?planHover:hitPlan(e.clientX,e.clientY);if(t!==planHover){planHover=t;showEl.style.cursor=t>=0?"pointer":"";requestDraw();}});
-window.addEventListener("keydown",e=>{if(!showOn)return;if(e.target.closest&&e.target.closest("a,button")&&(e.key==="Enter"||e.key===" "))return;const k=e.key;
+window.addEventListener("keydown",e=>{if(!showOn)return;if(e.target.closest&&e.target.closest("a,button,summary")&&(e.key==="Enter"||e.key===" "))return;const k=e.key;
   if(["ArrowRight","ArrowDown","PageDown"," ","Enter"].includes(k)){e.preventDefault();forward();}else if(["ArrowLeft","ArrowUp","PageUp"].includes(k)){e.preventDefault();back();}
   else if(k==="Home"){e.preventDefault();setStep(0,-1);}else if(k==="End"){e.preventDefault();setStep(LAST,1);}});
 
@@ -1228,13 +1258,13 @@ function wallSVG(kind){const X0=36,X1=324,Y0=44,px=6;
 function wxHTML(c){const cl=c.climate||null;
   return `<section class="wx" id="wx"><div class="an lab">${esc(WX.lab)}</div><div><h2 class="two">${two(WX.t)}</h2><p class="ad">${esc(WX.d)}</p>
     <div class="wsec"><figure><figcaption class="lab">Printed wall</figcaption>${wallSVG("p")}</figure><figure><figcaption class="lab">Wood-framed wall</figcaption>${wallSVG("f")}</figure></div>
-    <p class="wcap">Plan sections, drawn to one scale, 48 in of each wall. The printed wall follows ICON's published build-up: two concrete shells, open-cell foam between them, a reinforced core every 4 ft, 12 in nominal. The framed wall is 2x4 studs at 16 in with 7/16 in OSB and 1/2 in drywall. Siding is not drawn. Schematic, not a construction detail.</p>
-    ${srcHTML(["icWall","icPerf"],c)}
-    <table class="wxt"><thead><tr><th scope="col"></th><th scope="col">Printed concrete wall</th><th scope="col">Wood-framed wall</th></tr></thead><tbody>
-    ${WX.rows.map(r=>`<tr><td class="k">${esc(r.k)}</td><td><span class="hd">Printed concrete wall</span><p>${esc(r.p[0])}</p>${srcHTML(r.p[1],c)}</td><td><span class="hd">Wood-framed wall</span><p>${esc(r.f[0])}</p>${srcHTML(r.f[1],c)}</td></tr>`).join("")}
-    </tbody></table>
-    ${cl?`<div class="wnote"><div class="lab">Local hazards</div><div><p>${esc(cl.line)}</p>${srcHTML(cl.src||[],c)}</div></div>`:""}
-    <div class="wnote"><div class="lab">What it does not solve</div><div><p>${esc(WX.lim[0])}</p>${srcHTML(WX.lim[1],c)}</div></div></div></section>`;}
+    ${dsc("About the drawing",`<p class="wcap">Plan sections, drawn to one scale, 48 in of each wall. The printed wall follows ICON's published build-up: two concrete shells, open-cell foam between them, a reinforced core every 4 ft, 12 in nominal. The framed wall is 2x4 studs at 16 in with 7/16 in OSB and 1/2 in drywall. Siding is not drawn. Schematic, not a construction detail.</p>${srcHTML(["icWall","icPerf"],c)}`)}
+    <table class="wxt"><colgroup><col class="ck"><col><col></colgroup><thead><tr><th scope="col"></th><th scope="col">Printed concrete wall</th><th scope="col">Wood-framed wall</th></tr></thead><tbody>
+    ${WX.rows.map(r=>`<tr class="wr"><td class="k">${esc(r.k)}</td><td><span class="hd">Printed concrete wall</span><p class="sh">${esc(r.ps)}</p></td><td><span class="hd">Wood-framed wall</span><p class="sh">${esc(r.fs)}</p></td></tr>
+    <tr class="wdx"><td></td><td colspan="2">${dsc("Details and sources",`<div class="wdg"><div><span class="hd">Printed concrete wall</span><p>${esc(r.p[0])}</p>${srcHTML(r.p[1],c)}</div><div><span class="hd">Wood-framed wall</span><p>${esc(r.f[0])}</p>${srcHTML(r.f[1],c)}</div></div>`)}</td></tr>`).join("")}
+    </tbody></table><p class="note wn2">${esc(WX.d2)}</p>
+    ${cl?`<div class="wnote"><div class="lab">Local hazards</div><div><p class="sh">${esc(cl.short||cl.line)}</p>${dsc("Details and sources",`<p>${esc(cl.line)}</p>${srcHTML(cl.src||[],c)}`)}</div></div>`:""}
+    <div class="wnote"><div class="lab">What it does not solve</div><div><p class="sh">${esc(WX.lims)}</p>${dsc("Details and sources",`<p>${esc(WX.lim[0])}</p>${srcHTML(WX.lim[1],c)}`)}</div></div></div></section>`;}
 function renderFit(c){
   const f=firmOf(c),F=c.fit||{rows:[]},steps=stepsFor(c),G=ADDS[ADD_GROUP[f.type]||"dev"],who=f.short||f.name;
   const stepOf=r=>{const ok=s=>s.key!=="title";let i=steps.findIndex(s=>ok(s)&&s.scene===r.scene&&JSON.stringify(s.opts||{})===JSON.stringify(r.opts||{}));if(i<0)i=steps.findIndex(s=>ok(s)&&s.scene===r.scene);if(i<0)i=steps.findIndex(s=>ok(s)&&(ALSO[s.scene]||[]).includes(r.scene));return i;};
