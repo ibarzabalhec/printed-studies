@@ -212,6 +212,38 @@ body:not(.showing) .prog{display:none}
 .foot a.home svg{width:12px;height:12px;flex:none}
 .foot a.home:hover{border-bottom-color:var(--ink)}
 /* ---------- fit page: what printing adds ---------- */
+.wx{display:grid;grid-template-columns:minmax(11rem,15rem) minmax(0,1fr);gap:12px 40px;padding:34px 0;border-bottom:1px solid var(--rule)}
+.wx .an{padding-top:10px}
+.wx h2{font-size:clamp(24px,1.8vw + 10px,40px);line-height:1.06;margin:0}
+.wx .ad{font-size:17px;line-height:1.5;color:var(--ink2);margin:12px 0 0;max-width:44em}
+.wsec{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 32px;margin-top:24px;max-width:60rem}
+.wsec figure{margin:0;border-top:1px solid var(--ink);padding-top:10px}
+.wsec figcaption{margin-bottom:6px}
+.wsec svg{width:100%;height:auto;display:block;overflow:visible}
+.wsec .cn{fill:var(--stone);stroke:var(--stoneLine);stroke-width:1}
+.wsec .fm{fill:url(#wfoam);stroke:var(--ink3);stroke-width:.6}
+.wsec .fmb{fill:var(--plain)}
+.wsec .wd{fill:var(--plain);stroke:var(--ink3);stroke-width:1}
+.wsec .pn{fill:var(--paper);stroke:var(--ink3);stroke-width:1}
+.wsec .ln{fill:none;stroke:var(--ink3);stroke-width:1}
+.wsec .bt{fill:none;stroke:var(--ink3);stroke-width:.9}
+.wsec .rb{fill:var(--ink)}
+.wsec .dt{fill:var(--ink3)}
+.wsec text{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;fill:var(--ink2)}
+.wsec text.dm{fill:var(--ink)}
+.wcap{font-size:14px;line-height:1.6;color:var(--ink2);max-width:78ch;margin:12px 0 0}
+.wxt{width:100%;border-collapse:collapse;margin-top:28px;max-width:66rem}
+.wxt th{text-align:left;font:600 11px/1.3 var(--sans);color:var(--ink2);padding:0 16px 8px 0;border-bottom:1px solid var(--ink)}
+.wxt td{padding:14px 20px 14px 0;vertical-align:top;border-bottom:1px solid var(--rule)}
+.wxt td.k{width:11rem;font:700 12px/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);padding-top:16px}
+.wxt td p{margin:0 0 8px;font-size:15px;line-height:1.5;color:var(--ink)}
+.wxt td .hd{display:none}
+.wnote{display:grid;grid-template-columns:11rem minmax(0,1fr);gap:6px 20px;padding:16px 0;border-bottom:1px solid var(--rule);max-width:66rem}
+.wnote p{margin:0 0 8px;font-size:15px;line-height:1.55;color:var(--ink);max-width:74ch}
+@media (max-width:760px){.wx{grid-template-columns:1fr;gap:8px;padding:26px 0}.wsec{grid-template-columns:1fr}
+  .wxt thead{display:none}.wxt tr{display:block;border-bottom:1px solid var(--rule);padding:12px 0}.wxt td{display:block;border:0;padding:4px 0 6px}
+  .wxt td.k{width:auto;padding-top:0;color:var(--ink)}.wxt td .hd{display:block;font:600 11px/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin:6px 0 3px}
+  .wnote{grid-template-columns:1fr}}
 .adds{list-style:none;margin:0;padding:0}
 .add{display:grid;grid-template-columns:minmax(11rem,15rem) minmax(0,1fr);gap:12px 40px;padding:34px 0;border-bottom:1px solid var(--rule)}
 .add .an{font:700 13px/1 var(--mono);letter-spacing:.04em;color:var(--orange);padding-top:10px}
@@ -293,7 +325,7 @@ body:not(.showing) .prog{display:none}
 </div>
 
 <script>
-window.__DATA__ = {"mode":"client","title":"Westin Homes","communities":[{"id":"westin-homes","name":"Westin Homes","firm":{"name":"Westin Homes","short":"Westin","type":"homebuilder","region":"Houston"},"developer":"Westin Homes","place":"Houston and Austin, Texas","region":"Houston","sources":{"communities":{"n":"Westin Homes, Houston communities","u":"https://www.westin-homes.com/communities/houston"},"about":{"n":"Westin Homes, about","u":"https://www.westin-homes.com/about"},"builder":{"n":"Builder, Westin Homes","u":"https://www.builderonline.com/firms/westin-homes/"},"legacy":{"n":"Hillwood Communities, Legacy","u":"https://www.hillwoodcommunities.com/lifestyle-communities/legacy/"}},"title":{"line":"Printed homes for *Westin Homes.*","sub":"The homes, sections and sales center a printer could build, then how one printer builds them.","meta":["Homebuilder","Houston and Austin"],"src":["about","communities"],"scene":"home"},"facts":[{"k":"Houston communities","v":"28","src":"communities"},{"k":"Lots","v":"40 to 70 ft","src":"communities"},{"k":"Homes","v":"2,194 to 4,500 sq ft","src":"communities"},{"k":"2025 closings","v":"1,062","src":"builder"}],"dream":[{"cat":"homes","lab":"Homes","scene":"homes","line":"Single-story and two-story homes of *printed rooms,* under the printer's 27 ft limit.","data":["ICON: \u003cb>2,500 sq ft\u003c/b> in under \u003cb>7 days\u003c/b>","Max print height \u003cb>27 ft\u003c/b>","Westin homes to \u003cb>4,500 sq ft\u003c/b>","key"],"src":["tech","specs","communities"]},{"cat":"neighborhood","lab":"Sections","scene":"street","opts":{"lots":[40,50,60,70,55,65]},"line":"A printed section on *40 to 70 ft lots,* the widths Westin builds on.","data":["Print area \u003cb>40 × 100 ft\u003c/b> per setup","Houston communities \u003cb>28\u003c/b>"],"src":["specs","communities"]},{"cat":"buildings","lab":"Sales center and walls","scene":"sales","opts":{"wall":true},"line":"A sales center of *three printed rooms,* behind a garden wall that curves without formwork.","data":["key"],"src":["eth"]}],"value":{"scaleV":"1,062","scaleL":"Westin closings in 2025, Houston and Austin","src":["builder"]},"ask":{"line":"One conversation with *your team* about one printed section."},"fit":{"line":"What Westin builds, *and its printed version.*","rows":[{"add":"product","their":"28 Houston communities","what":"From Kresston in Magnolia to Harvest Green in Richmond, on 40 to 70 ft lots.","src":["communities"],"scene":"street","opts":{"lots":[40,50,60,70,55,65]},"printed":"A section of *printed homes* on the same lots.","caps":["week","area"]},{"add":"hybrid","their":"Homes to 4,500 sq ft","what":"Plans from 2,194 to 4,500 sq ft, priced from $349,623.","src":["communities"],"scene":"home2","printed":"Two printed stories *under the 27 ft limit.*","caps":["height","story"]},{"add":"product","their":"Legacy, League City","what":"A 60 ft section in Hillwood's Legacy, one of its ten builders.","src":["communities","legacy"],"scene":"home","printed":"A home of *linked printed rooms,* its garden walls from the same machine.","caps":["week","fire"]},{"add":"own","their":"1,062 closings in 2025","what":"Houston and Austin together.","src":["builder"],"scene":"year","printed":"One Titan at one home a week: *about 50 homes a year,* our arithmetic.","caps":["week","hours"]}]}}],"home":"https://ibarzabalhec.github.io/","date":"2026-09-28"};
+window.__DATA__ = {"mode":"client","title":"Westin Homes","communities":[{"id":"westin-homes","name":"Westin Homes","firm":{"name":"Westin Homes","short":"Westin","type":"homebuilder","region":"Houston"},"developer":"Westin Homes","place":"Houston and Austin, Texas","region":"Houston","sources":{"communities":{"n":"Westin Homes, Houston communities","u":"https://www.westin-homes.com/communities/houston"},"about":{"n":"Westin Homes, about","u":"https://www.westin-homes.com/about"},"builder":{"n":"Builder, Westin Homes","u":"https://www.builderonline.com/firms/westin-homes/"},"legacy":{"n":"Hillwood Communities, Legacy","u":"https://www.hillwoodcommunities.com/lifestyle-communities/legacy/"}},"title":{"line":"Printed homes for *Westin Homes.*","sub":"The homes, sections and sales center a printer could build, then how one printer builds them.","meta":["Homebuilder","Houston and Austin"],"src":["about","communities"],"scene":"home"},"facts":[{"k":"Houston communities","v":"28","src":"communities"},{"k":"Lots","v":"40 to 70 ft","src":"communities"},{"k":"Homes","v":"2,194 to 4,500 sq ft","src":"communities"},{"k":"2025 closings","v":"1,062","src":"builder"}],"dream":[{"cat":"homes","lab":"Homes","scene":"homes","line":"Single-story and two-story homes of *printed rooms,* under the printer's 27 ft limit.","data":["ICON: \u003cb>2,500 sq ft\u003c/b> in under \u003cb>7 days\u003c/b>","Max print height \u003cb>27 ft\u003c/b>","Westin homes to \u003cb>4,500 sq ft\u003c/b>","key"],"src":["tech","specs","communities"]},{"cat":"neighborhood","lab":"Sections","scene":"street","opts":{"lots":[40,50,60,70,55,65]},"line":"A printed section on *40 to 70 ft lots,* the widths Westin builds on.","data":["Print area \u003cb>40 × 100 ft\u003c/b> per setup","Houston communities \u003cb>28\u003c/b>"],"src":["specs","communities"]},{"cat":"buildings","lab":"Sales center and walls","scene":"sales","opts":{"wall":true},"line":"A sales center of *three printed rooms,* behind a garden wall that curves without formwork.","data":["key"],"src":["eth"]}],"value":{"scaleV":"1,062","scaleL":"Westin closings in 2025, Houston and Austin","src":["builder"]},"ask":{"line":"One conversation with *your team* about one printed section."},"climate":{"line":"Houston and Austin: Harvey dropped 36 to 48 inches of rain on the Houston metro in 2017, and Beryl's gusts reached 97 mph in Brazoria County in 2024. Austin sits in the region known as Flash Flood Alley, and had 90 days at or above 100°F in 2011. Formosan termites are found in Harris, Fort Bend and Travis counties.","src":["harvey","beryl","nwsAus","formosan"]},"fit":{"line":"What Westin builds, *and its printed version.*","rows":[{"add":"product","their":"28 Houston communities","what":"From Kresston in Magnolia to Harvest Green in Richmond, on 40 to 70 ft lots.","src":["communities"],"scene":"street","opts":{"lots":[40,50,60,70,55,65]},"printed":"A section of *printed homes* on the same lots.","caps":["week","area"]},{"add":"hybrid","their":"Homes to 4,500 sq ft","what":"Plans from 2,194 to 4,500 sq ft, priced from $349,623.","src":["communities"],"scene":"home2","printed":"Two printed stories *under the 27 ft limit.*","caps":["height","story"]},{"add":"product","their":"Legacy, League City","what":"A 60 ft section in Hillwood's Legacy, one of its ten builders.","src":["communities","legacy"],"scene":"home","printed":"A home of *linked printed rooms,* its garden walls from the same machine.","caps":["week","fire"]},{"add":"own","their":"1,062 closings in 2025","what":"Houston and Austin together.","src":["builder"],"scene":"year","printed":"One Titan at one home a week: *about 50 homes a year,* our arithmetic.","caps":["week","hours"]}]}}],"home":"https://ibarzabalhec.github.io/","date":"2026-09-29"};
 </script>
 <script>
 (function(){
@@ -319,7 +351,25 @@ const SG = {
   wolfIcon:{n:"ICON, Wolf Ranch",u:"https://www.iconbuild.com/projects/wolf-ranch"},
   hillwoodWolf:{n:"Hillwood, Wolf Ranch news",u:"https://www.wolfranchbyhillwood.com/news/new-3d-printed-homes-coming-to-wolf-ranch-in-2023/"},
   houstonia:{n:"Houstonia, Zuri Gardens, 5 December 2025",u:"https://www.houstoniamag.com/home-and-real-estate/2025/12/3d-printed-houses-neighborhood-houston"},
-  lennar:{n:"Lennar, 10 November 2022",u:"https://newsroom.lennar.com/2022-11-10-LENNAR-ANNOUNCES-VISIONARY-COMMUNITY-OF-3D-PRINTED-HOMES-WITH-ICON-IS-NOW-UNDERWAY-IN-GEORGETOWN,-TX"}
+  lennar:{n:"Lennar, 10 November 2022",u:"https://newsroom.lennar.com/2022-11-10-LENNAR-ANNOUNCES-VISIONARY-COMMUNITY-OF-3D-PRINTED-HOMES-WITH-ICON-IS-NOW-UNDERWAY-IN-GEORGETOWN,-TX"},
+  /* weather, heat and moisture: read 29 September 2026 */
+  icWall:{n:"ICON, Wall System page",u:"https://www.iconbuild.com/design-build/wall-system"},
+  icPerf:{n:"ICON, Wall System General Performance Summary",u:"https://cdn.prod.website-files.com/6981dd4dc49a03a3c838626e/6a06f33d7d13328707665c20_699c925887d677db4114db64_Wall%20System%20-%20General%20Performance_compressed.pdf"},
+  mit:{n:"MIT Concrete Sustainability Hub, printed homes white paper, March 2024",u:"https://cdn.prod.website-files.com/6981dd4dc49a03a3c838626e/6a06f3f7b2dd5307f447d66b_whitepaper_03.24_v1%20(1)_compressed.pdf"},
+  ttu:{n:"Texas Tech for NIST, debris impact of building assemblies, August 2006",u:"https://www.depts.ttu.edu/nwi/research/DebrisImpact/Reports/TTU_Final_NIST_Report_numbered.pdf"},
+  fema:{n:"FEMA, Technical Bulletin 2, flood damage-resistant materials, January 2025",u:"https://www.fema.gov/sites/default/files/documents/fema_tb_2_flood_damage-resistant_materials_requirements_01-22-2025.pdf"},
+  epa:{n:"EPA, A Brief Guide to Mold, Moisture and Your Home",u:"https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home"},
+  termTX:{n:"Texas A&M AgriLife, Subterranean Termites (E-368)",u:"https://extensionentomology.tamu.edu/wp-content/uploads/sites/3/2016/06/Subterranean-termites-E368.pdf"},
+  formosan:{n:"Texas A&M, Formosan subterranean termites, 17 May 2022",u:"https://urbanentomology.tamu.edu/urban-pests/termites/formosan/"},
+  apa:{n:"APA, one-hour 2x4 stud wall detail (wood industry)",u:"https://www.apawood.org/guides-tools-training/technical-document-library/typical-details/one-hour-load-bearing-interior-wall-system-2x4-studs-16-oc/"},
+  jm:{n:"Johns Manville, STC reference guide, 2019 (insulation maker)",u:"https://www.jm.com/content/dam/jm/global/en/building-insulation/Files/BI%20Toolbox/Acoustical-Assemblies-STC-Rating-Reference-Guide.pdf"},
+  esl:{n:"Texas A&M Energy Systems Laboratory, residential energy code guide (2015 IRC)",u:"https://esl.tamu.edu/wp-content/uploads/2026/07/Building_Guide.pdf"},
+  glotz:{n:"Glotz, Rasehorn and Petryna, Materials, 2024",u:"https://depositonce.tu-berlin.de/items/fca35e8d-91d2-4088-8387-63aa756ef4e1/full"},
+  tdi:{n:"Texas Department of Insurance, windstorm inspection brochure",u:"https://tdi.texas.gov/WIND/documents/WSbrochureBeforeUBuild.pdf"},
+  harvey:{n:"National Hurricane Center, Hurricane Harvey report, 9 May 2018",u:"https://nhc.noaa.gov/data/tcr/AL092017_Harvey.pdf"},
+  beryl:{n:"NWS Houston/Galveston, Hurricane Beryl report, July 2024",u:"https://www.weather.gov/media/hgx/TropicalEventSummary/PSHHGX_2024AL02_Beryl_Summary.pdf"},
+  nwsAus:{n:"NWS Austin/San Antonio, Austin climate summary",u:"https://www.weather.gov/media/ewx/climate/ClimateSummary-ewx-Austin.pdf"},
+  nwsPhx:{n:"NWS Phoenix, 2024 year in review",u:"https://www.weather.gov/psr/YearInReview2024"}
 };
 function srcOf(c,k){return (c&&c.sources&&c.sources[k])||SG[k];}
 
@@ -445,6 +495,17 @@ const LIB={
     ...homeOf(0,-104,46,46),...homeOf(1,-58,46,46),...homeOf(4,-12,42,44),
     ...((o&&o.entry)?[W({pts:arc(-64,-66,22,55,125,40),t:2.2,h:(u)=>3+6*Math.pow(Math.sin(Math.PI*u),.8),openings:[OP({uc:.5},8,3.4,6,"panel")]}),CO(-64,9,-46,"Entry",-30,-36,1),S(-76,-50,2),S(-52,-50,2.2)]:[]),
     CO(-60,8.6,-10,"Screening wall",-10,-50,1),S(-80,-22,2.6),S(-44,-24,2.2),S(8,-22,2.8),CO(40,26,44,"Lookout",40,-30,1),F(-20,-22,6),T(-66,30,26),T(-12,28,22),T(98,26,24)]}),
+  /* a printed double wall next to a wood stud wall. Schematic: thickness drawn at three times the length scale, the same for both */
+  wallsec:()=>({yaw:-30,pitch:22,nyaw:-34,npitch:26,fill:.94,dur:2800,solids:(()=>{const s=[],k=3,ts=2.5/12*k,hw=6/12*k,L0=-32,L1=-6;
+    s.push(W({pts:line(L0,-hw+ts/2,L1,-hw+ts/2,14),t:ts,h:10}),W({pts:line(L0,hw-ts/2,L1,hw-ts/2,14),t:ts,h:10}));
+    for(let i=0,x=L0+2;x<L1-1;i++,x+=4){const zo=i%2?hw-ts:-hw+ts,zc=i%2?zo-.375:zo+.375;s.push(W({pts:line(x-.375,zc,x+.375,zc,1),t:.75,h:10}));}
+    s.push(P({pts:rect4(L0,-hw+ts,L1,hw-ts),y0:0,y1:9.6}));
+    const S0=6,S1=30,d=3.5/24*k;
+    s.push(P({pts:rect4(S0,-d,S1,d),y0:0,y1:.125}),P({pts:rect4(S0,-d,S1,d),y0:9.75,y1:10}));
+    for(let x=S0;x<=S1-.1;x+=16/12)s.push(P({pts:rect4(x,-d,x+.125,d),y0:.125,y1:9.75}));
+    s.push(P({pts:rect4(20,d,S1,d+.125),y0:0,y1:10}),P({pts:rect4(20,-d-.11,S1,-d),y0:0,y1:10}));
+    s.push(CO(-26,10,-hw,"Printed shell",-30,-40,1),CO(-15,9.6,0,"Foam between shells",10,-54,1),CO(10,9.75,0,"Studs at 16 in",-10,-48,1),CO(26,7,-d-.11,"Sheathing and drywall",30,-30,1));
+    s.push(G({kind:"label",x:-19,z:-10,t:["Printed wall","Schematic"]}),G({kind:"label",x:18,z:-10,t:["Wood-framed wall","Schematic"]}),F(0,-6,6));return s;})()}),
   wall:()=>({yaw:-30,pitch:16,fill:.56,dur:1900,solids:[W({pts:line(-12,0,12,0,16),t:1.2,h:8}),F(15.5,-3,6)]}),
   curve:()=>({yaw:-30,pitch:18,fill:.6,dur:1900,solids:[W({pts:(()=>{const p=[];for(let i=0;i<=40;i++){const x=-14+28*i/40;p.push([x,4.2*Math.sin(x/28*TAU*.85)]);}return p;})(),t:1.2,h:8}),F(17,-4,6)]}),
   system:()=>({yaw:-28,pitch:24,nyaw:-42,npitch:26,hzShift:-.08,fill:.86,dur:2800,solids:[
@@ -628,11 +689,41 @@ function autoPlan(c){const P=c.plan;if(!P||!P.auto||P.boundary)return;const r=se
    one for the math and the record, and the site with the next step. A merged step keeps every figure */
 const MACHINE={act:"The plan",lab:"The machine",scene:"system",line:"A printer lays one bead of concrete, layer on layer, with no formwork. *Titan is sold as a system: printer, pump, mixer, software and designs.*",
   data:["Print area <b>40 × 100 ft</b>","Max height <b>27 ft</b>","<b>12,000 sq ft</b> per story","<b>2</b> operators, up to <b>24 hours</b>","Nozzle precision <b>±0.059 in</b>","CODEX designs <b>$2K to $5K</b>"],src:["specs","program","eth"]};
+/* how a printed wall handles weather, heat and moisture, next to a wood-framed wall. Shared ICON facts follow the Claims
+   Register (F8, F16 to F21). Every cell carries its source; a cell with no published figure says so */
+const WX={lab:"Weather, heat and moisture",t:"How a printed wall handles *weather, heat and moisture*",
+  d:"ICON's printed wall next to a wood-framed wall, row by row. Every figure has its source. Where no figure is published, the cell says so.",
+  line:"How a printed wall handles *weather, heat and moisture,* next to a wood-framed wall.",
+  stats:[["100 psf","wind load, consistent with a 175 mph design wind speed"],["R-18","for a 10 ft wall, with foam between the shells"],["178 min","in a fire test, rated 2 hours for design"],["1.15 perm","a Class III vapor retarder"]],
+  rows:[
+    {k:"Wind and flying debris",
+      p:["Meets Florida's High-Velocity Hurricane Zone rules for wind loads up to 100 psf, consistent with Miami-Dade's 175 mph design wind speed. Passed large-missile impact tests without penetration.",["icWall","wall"]],
+      f:["In Texas Tech tests for NIST, a 15 lb 2x4 fired at 52 to 54 mph went through stud walls faced with plywood, siding or stucco. It went through brick veneer on studs at 69 mph.",["ttu"]]},
+    {k:"Heat",
+      p:["R-18 for a 10 ft wall with cores 4 ft apart and a wood top plate, and R-9 to R-18.5 across ICON's configurations. The insulation is open-cell spray foam between the two concrete shells. In an MIT model, a printed home had 2% to 9% lower operating carbon than a framed one, by climate.",["icWall","icPerf","mit"]],
+      f:["Texas code asks for R-13 in the stud cavity in climate zone 2, which takes in Harris, Fort Bend, Brazoria, Galveston and Travis counties. A mass wall there needs R-4 to R-6.",["esl"]]},
+    {k:"Moisture and flooding",
+      p:["The printed concrete is a Class III vapor retarder (1.15 perm) and passed a wind-driven rain test. ICON says it has no organic material for mold to feed on. FEMA rates concrete as flood damage-resistant, and open-cell foam, the wall's insulation, as not.",["icPerf","icWall","fema"]],
+      f:["FEMA rates solid lumber as flood damage-resistant, and OSB, paper-faced drywall and fiberglass batts as not. EPA: dry wet materials within 24 to 48 hours to keep mold from growing.",["fema","epa"]]},
+    {k:"Termites, rot and upkeep",
+      p:["No structural wood framing near the foundation, ICON says. Passed freeze-thaw testing. Exterior coatings must let vapor through, at least 50 perms, and an exposed wall needs a clear sealant. No service life published.",["icPerf"]],
+      f:["In Texas, subterranean termites cause about $500 million in damage a year. An unprotected home has about a 70% chance of termite damage within 25 years, Texas A&M says.",["termTX"]]},
+    {k:"Fire",
+      p:["178 minutes in an ASTM E119 fire test as a load-bearing wall, specified as a 2-hour fire-rated assembly for design.",["icWall","wall"]],
+      f:["One hour for a 2x4 stud wall with 5/8 in. Type X drywall on both sides, in a wood industry detail.",["apa"]]},
+    {k:"Sound",
+      p:["No sound rating (STC) published. ICON says the mass wall isolates sound without added material.",["icPerf"]],
+      f:["STC 35 for a 2x4 wall with 1/2 in. drywall on each side, and STC 38 with R-13 batts, in an insulation maker's guide.",["jm"]]}],
+  lim:["The printer builds walls. Roofs, windows and doors are conventional, and in a HUD test of a printed wall, water came in around a window after 10 minutes. Printed concrete shrinks and can crack: ICON's guide sets control joints and paints over shrinkage cracks, and lab tests find weak planes at cold joints between layers. Most printed buildings in the U.S. have been approved case by case, as an alternative method. Construction Physics estimated ICON's walls at 2 to 4 times the cost of a framed wall in April 2024.",["hud","icPerf","glotz","cp"]]};
+const WX_SRC=[...new Set(WX.rows.flatMap(r=>[...r.p[1],...r.f[1]]).concat(WX.lim[1]))];
 const ALSO={amenities:["program","ramada","club"],infra:["program","encl","bus","screen"],system:["curve","wall","layer"],homes:["home","home2"],edges:["look","sign","screen"],buildings:["club","sales","ramada"],places:["markers","guides","trail","bus","honey"],neighborhood:["street"],street:["neighborhood"],sales:["screen"],yearrec:["year","record"]};
 function stepsFor(c){autoPlan(c);
   const T=c.title||{};const st=[{key:"title",lab:"Study",layout:"title",scene:T.scene||null,opts:T.opts}];
   c.dream.forEach(p=>st.push({act:c.name,lab:p.lab,scene:p.scene,opts:p.opts,line:p.line,data:p.data,src:p.src,piece:true,cat:p.cat}));
   st.push(Object.assign({},MACHINE));
+  const cl=c.climate||{};
+  st.push({act:"The plan",lab:WX.lab,scene:"wallsec",layout:"text",line:WX.line,stats:WX.stats,srcRight:true,
+    note:(cl.line?cl.line+" ":"")+"The wood-framed wall, row by row with its sources, is on the Fit page.",src:["icWall","icPerf","wall"].concat(cl.src||[]).filter((k,i,a)=>a.indexOf(k)===i),wx:true});
   const v=c.value||{};
   st.push({act:"The plan",lab:"The math and the record",layout:"text",scene:"yearrec",line:"Titan and its pump cost $899K. *ICON says it prints a 2,500 sq ft home in under seven days.*",
     stats:[["$899K","Titan and pump"],["Under 7 days","a 2,500 sq ft home, per ICON"],["$20","per sq ft, ICON's target for wall systems"]].concat(v.scaleV?[[v.scaleV,v.scaleL]]:[]),
@@ -1109,6 +1200,41 @@ function renderHome(){
     <li><b>4. Fit</b><span>What printing adds for the firm's type, each with a published figure, tied to the firm's own projects.</span></li></ol></div></section>
   <p class="foot">Printed Studies · Internal build · Héctor Ibarzábal · ibarzabalhec@gmail.com${DATA.date?" · "+esc(DATA.date):""}</p>`;
 }
+/* plan sections of the two walls, drawn to one scale: 6 px to the inch, 48 in of wall. Schematic, not a construction detail */
+function wallSVG(kind){const X0=36,X1=324,Y0=44,px=6;
+  if(kind==="p"){const sh=2.5*px,cav=7*px,y1=Y0+sh,y2=y1+cav,y3=y2+sh,cx=X0+144;
+    return `<svg viewBox="0 0 360 170" role="img" aria-label="Plan section of a printed wall: two concrete shells with foam between them and a reinforced core"><defs><pattern id="wfoam" width="6" height="6" patternUnits="userSpaceOnUse"><rect class="fmb" width="6" height="6"/><circle class="dt" cx="1.5" cy="1.5" r=".7"/><circle class="dt" cx="4.5" cy="4.5" r=".7"/></pattern></defs>
+      <rect class="fm" x="${X0}" y="${y1}" width="${X1-X0}" height="${cav}"/><rect class="cn" x="${X0}" y="${Y0}" width="${X1-X0}" height="${sh}"/><rect class="cn" x="${X0}" y="${y2}" width="${X1-X0}" height="${sh}"/>
+      <rect class="cn" x="${cx-9}" y="${y1-1}" width="18" height="19"/><circle class="rb" cx="${cx}" cy="${y1+9}" r="3"/>
+      <path class="ln" d="M${X0+48} ${y1} V${y2} M${X1-48} ${y1} V${y2}" stroke-dasharray="3 2"/>
+      <path class="ln" d="M16 ${Y0} V${y3} M12 ${Y0} H20 M12 ${y3} H20"/><text class="dm" x="10" y="${Y0-10}">12 in</text>
+      <path class="ln" d="M${X0+20} ${Y0+4} V26"/><text x="${X0+20}" y="20">Printed shell</text>
+      <path class="ln" d="M${cx+6} ${y1+9} L${cx+40} 26"/><text x="${cx+40}" y="20">Reinforced core</text>
+      <path class="ln" d="M${X0+40} ${y1+cav/2} V${y3+22}"/><text x="${X0+40}" y="${y3+36}">Open-cell foam</text>
+      <path class="ln" d="M${X1-48} ${y1+cav/2} L${X1-30} ${y3+22}"/><text x="${X1-30}" y="${y3+36}" text-anchor="end">Steel tie</text>
+      <text x="${X1+4}" y="${Y0+11}" class="dm">Out</text><text x="${X1+4}" y="${y3-2}" class="dm">In</text></svg>`;}
+  const osb=7/16*px,st=3.5*px,gw=.5*px,y1=Y0+osb,y2=y1+st,y3=y2+gw,studs=[X0,X0+96,X0+192,X1-9];
+  const batt=(a,b)=>{let d=`M${a} ${y1+st/2}`;const n=Math.round((b-a)/9);for(let i=0;i<n;i++){const x=a+(b-a)*(i+.5)/n,y=i%2?y2-2:y1+2;d+=` Q${x} ${y} ${a+(b-a)*(i+1)/n} ${y1+st/2}`;}return `<path class="bt" d="${d}"/>`;};
+  return `<svg viewBox="0 0 360 170" role="img" aria-label="Plan section of a wood-framed wall: sheathing, 2x4 studs with batts, and drywall">
+    <rect class="pn" x="${X0}" y="${Y0}" width="${X1-X0}" height="${osb}"/><rect class="pn" x="${X0}" y="${y2}" width="${X1-X0}" height="${gw}"/>
+    ${studs.slice(0,-1).map((x,i)=>batt(x+9,studs[i+1])).join("")}
+    ${studs.map(x=>`<rect class="wd" x="${x}" y="${y1}" width="9" height="${st}"/><path class="ln" d="M${x} ${y1}L${x+9} ${y2}M${x+9} ${y1}L${x} ${y2}"/>`).join("")}
+    <path class="ln" d="M16 ${Y0} V${y3} M12 ${Y0} H20 M12 ${y3} H20"/><text class="dm" x="10" y="${Y0-10}">4.4 in</text>
+    <path class="ln" d="M${X0+60} ${Y0+1} V26"/><text x="${X0+60}" y="20">OSB sheathing</text>
+    <path class="ln" d="M${X0+196} ${y1+4} L${X0+214} 26"/><text x="${X0+214}" y="20">2x4 stud</text>
+    <path class="ln" d="M${X0+50} ${y1+st/2} V${y3+22}"/><text x="${X0+50}" y="${y3+36}">Fiberglass batt</text>
+    <path class="ln" d="M${X1-40} ${y2+2} L${X1-30} ${y3+22}"/><text x="${X1-30}" y="${y3+36}" text-anchor="end">Drywall</text>
+    <text x="${X1+4}" y="${Y0+8}" class="dm">Out</text><text x="${X1+4}" y="${y3}" class="dm">In</text></svg>`;}
+function wxHTML(c){const cl=c.climate||null;
+  return `<section class="wx" id="wx"><div class="an lab">${esc(WX.lab)}</div><div><h2 class="two">${two(WX.t)}</h2><p class="ad">${esc(WX.d)}</p>
+    <div class="wsec"><figure><figcaption class="lab">Printed wall</figcaption>${wallSVG("p")}</figure><figure><figcaption class="lab">Wood-framed wall</figcaption>${wallSVG("f")}</figure></div>
+    <p class="wcap">Plan sections, drawn to one scale, 48 in of each wall. The printed wall follows ICON's published build-up: two concrete shells, open-cell foam between them, a reinforced core every 4 ft, 12 in nominal. The framed wall is 2x4 studs at 16 in with 7/16 in OSB and 1/2 in drywall. Siding is not drawn. Schematic, not a construction detail.</p>
+    ${srcHTML(["icWall","icPerf"],c)}
+    <table class="wxt"><thead><tr><th scope="col"></th><th scope="col">Printed concrete wall</th><th scope="col">Wood-framed wall</th></tr></thead><tbody>
+    ${WX.rows.map(r=>`<tr><td class="k">${esc(r.k)}</td><td><span class="hd">Printed concrete wall</span><p>${esc(r.p[0])}</p>${srcHTML(r.p[1],c)}</td><td><span class="hd">Wood-framed wall</span><p>${esc(r.f[0])}</p>${srcHTML(r.f[1],c)}</td></tr>`).join("")}
+    </tbody></table>
+    ${cl?`<div class="wnote"><div class="lab">Local hazards</div><div><p>${esc(cl.line)}</p>${srcHTML(cl.src||[],c)}</div></div>`:""}
+    <div class="wnote"><div class="lab">What it does not solve</div><div><p>${esc(WX.lim[0])}</p>${srcHTML(WX.lim[1],c)}</div></div></div></section>`;}
 function renderFit(c){
   const f=firmOf(c),F=c.fit||{rows:[]},steps=stepsFor(c),G=ADDS[ADD_GROUP[f.type]||"dev"],who=f.short||f.name;
   const stepOf=r=>{const ok=s=>s.key!=="title";let i=steps.findIndex(s=>ok(s)&&s.scene===r.scene&&JSON.stringify(s.opts||{})===JSON.stringify(r.opts||{}));if(i<0)i=steps.findIndex(s=>ok(s)&&s.scene===r.scene);if(i<0)i=steps.findIndex(s=>ok(s)&&(ALSO[s.scene]||[]).includes(r.scene));return i;};
@@ -1122,6 +1248,7 @@ function renderFit(c){
     return `<li class="add"><div class="an mono">${String(i+1).padStart(2,"0")}</div><div class="ab"><h2 class="two">${two(it.t)}</h2><p class="ad">${esc(it.d)}</p>
       <div class="afig"><b>${esc(it.v)}</b><span>${esc(it.l)}</span>${srcHTML(it.src,c)}</div>
       ${rows.length?`<div class="k lab at">At ${esc(who)}</div><ul class="heres">${rows.map(here).join("")}</ul>`:""}</div></li>`;}).join("")}</ol>
+  ${wxHTML(c)}
   <p class="foot">${footLine(c)}</p>`;
 }
 /* thumbnails: the fit rows' scenes, drawn by the same engine into small canvases. Each prints once when it scrolls into view */
