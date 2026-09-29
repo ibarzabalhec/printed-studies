@@ -883,7 +883,9 @@ function drawTree(o,P2,s,c,a){const h=o.h*.8,b=P2(o.x,0,o.z),W=h*.68*s,r=seeded(
 function drawShrub(o,P2,s,c){const b=P2(o.x,0,o.z),R=o.r*s*1.25,r=seeded(Math.round(o.x*11+o.z*5+90)),m=new Path2D();
   for(let i=0;i<6;i++){const u=(i/5)*2-1,rr=R*(.42+r()*.16)*(1-.3*Math.abs(u)),x=b[0]+u*R*.8,y=b[1]-R*(.36+.22*(1-u*u))-(r()-.5)*R*.12;m.moveTo(x+rr,y);m.arc(x,y,rr,0,TAU);}
   const g=ctx.createLinearGradient(0,b[1]-R*1.1,0,b[1]);g.addColorStop(0,rgb(mix(C.ground,C.ink,C.dark?.26:.12)));g.addColorStop(1,rgb(mix(C.ground,C.ink,C.dark?.1:.26)));ctx.fillStyle=g;ctx.fill(m,"nonzero");}
-function drawScene(key,sc,fr,hb,fa,ca,alpha,zoom){
+/* callout labels drawn this frame; a label that would overlap one already drawn moves up (or down, near the bar) */
+const CO_BOX=[];
+function drawScene(key,sc,fr,hb,fa,ca,alpha,zoom){CO_BOX.length=0;
   const fit=fitScene(key,sc,fr),c=fit.c,s=fit.s*zoom,ax=fit.anchor[0],ay=fit.anchor[1],ox=ax+(fit.ox-ax)*zoom,oy=ay+(fit.oy-ay)*zoom;
   const P2=(x,y,z)=>{const q=prj(c,x,y,z);return [ox+s*q[0],oy+s*q[1],q[2]];};
   ctx.save();ctx.globalAlpha=alpha;const items=[];const dl=Math.max(1/12,4.2/(s*c.cp));const hq=hb>=999?hb:Math.floor(hb/dl)*dl;
@@ -945,7 +947,11 @@ function drawScene(key,sc,fr,hb,fa,ca,alpha,zoom){
     ctx.font="500 12px 'IBM Plex Mono',Menlo,monospace";ctx.fillStyle=rgb(C.ink);ctx.fillText(o.t[0].toUpperCase(),q[0],q[1]);
     if(o.t[1]){ctx.font="400 12px 'IBM Plex Mono',Menlo,monospace";ctx.fillStyle=rgb(C.ink2);ctx.fillText(o.t[1].toUpperCase(),q[0],q[1]+16);}ctx.restore();}
     if(o.type==="flat"&&o.kind==="callout"&&fa>0&&!THUMB&&!(isNarrow()&&!o.pr)){const q=P2(o.x,o.y,o.z);ctx.save();ctx.font="500 11.5px 'IBM Plex Mono',Menlo,monospace";const tw=ctx.measureText(o.t.toUpperCase()).width;let dx=o.dx;
-      if(dx>=0&&q[0]+dx+12+tw>Wd-10)dx=-Math.max(20,Math.abs(dx));else if(dx<0&&q[0]+dx-12-tw<10)dx=Math.max(20,Math.abs(dx));o={...o,dx};const ex=q[0]+dx,ey=q[1]+o.dy;ctx.globalAlpha*=fa;
+      if(dx>=0&&q[0]+dx+12+tw>Wd-10)dx=-Math.max(20,Math.abs(dx));else if(dx<0&&q[0]+dx-12-tw<10)dx=Math.max(20,Math.abs(dx));o={...o,dx};const ex=q[0]+dx;let ey=q[1]+o.dy;
+      {const tx0=dx<0?ex-12-tw:ex+12,tx1=tx0+tw,hit=y=>CO_BOX.find(b=>tx0<b.x1+6&&tx1>b.x0-6&&y-10<b.y1+3&&y+5>b.y0-3);
+       let up=ey,dn=ey,b;for(let n=0;n<8&&(b=hit(up));n++)up=b.y0-3-5-1;for(let n=0;n<8&&(b=hit(dn));n++)dn=b.y1+3+10+1;
+       ey=(up===ey)?ey:(up-10>=BAR_B+6?up:dn);CO_BOX.push({x0:tx0,x1:tx1,y0:ey-10,y1:ey+5});}
+      ctx.globalAlpha*=fa;
       ctx.strokeStyle=rgb(C.ink2);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(q[0],q[1]);ctx.lineTo(ex,ey);ctx.lineTo(ex+(o.dx<0?-8:8),ey);ctx.stroke();
       ctx.beginPath();ctx.arc(q[0],q[1],2.4,0,TAU);ctx.fillStyle=rgb(C.ink);ctx.fill();
       ctx.font="500 11.5px 'IBM Plex Mono',Menlo,monospace";ctx.fillStyle=rgb(C.ink);ctx.textAlign=o.dx<0?"right":"left";ctx.fillText(o.t.toUpperCase(),ex+(o.dx<0?-12:12),ey+4);ctx.restore();}
