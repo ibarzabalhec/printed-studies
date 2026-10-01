@@ -717,7 +717,7 @@ const MACHINE={act:"The plan",lab:"The machine",scene:"system",line:"A printer l
 const WX={lab:"Weather, heat and moisture",t:"How a printed wall handles *weather, heat and moisture*",
   d:"ICON's printed wall next to a wood-framed wall, row by row.",d2:"Every figure has its source. Where no figure is published, the cell says so.",
   line:"How a printed wall handles *weather, heat and moisture,* next to a wood-framed wall.",
-  stats:[["100 psf","wind load, consistent with a 175 mph design wind speed"],["R-18","for a 10 ft wall, with foam between the shells"],["178 min","in a fire test, rated 2 hours for design"],["1.15 perm","a Class III vapor retarder"]],
+  stats:[["100 psf","wind load, consistent with Miami-Dade's 175 mph design wind speed"],["R-18","for a 10 ft wall, with foam between the shells"],["178 min","in a fire test, rated 2 hours for design"],["1.15 perm","a Class III vapor retarder"]],
   rows:[
     {k:"Wind and flying debris",ps:"100 psf wind load, impact tests passed",fs:"A 2x4 at 52 to 54 mph went through",
       p:["Meets Florida's High-Velocity Hurricane Zone rules for wind loads up to 100 psf, consistent with Miami-Dade's 175 mph design wind speed. Passed large-missile impact tests without penetration.",["icWall","wall"]],
@@ -751,7 +751,7 @@ function stepsFor(c){autoPlan(c);
   const v=c.value||{};
   st.push({act:"The plan",lab:"The math and the record",layout:"text",scene:"yearrec",line:"Titan and its pump cost $899K. *ICON says it prints a 2,500 sq ft home in under seven days.*",
     stats:[["$899K","Titan and pump"],["Under 7 days","a 2,500 sq ft home, per ICON"],["$20","per sq ft, ICON's target for wall systems"]].concat(v.scaleV?[[v.scaleV,v.scaleL]]:[]),
-    recs:[["Wolf Ranch","100 printed homes, 2025"],["Fort Bliss","78,000+ sq ft, July 2026"],["The Army","9.3% savings, 4× the speed"],["Walmart","8,000 sq ft addition"],["Code","2-hour fire, 175 mph wind, ESR-4652"]],srcRight:true,
+    recs:[["Wolf Ranch","100 printed homes, 2025"],["Fort Bliss","78,000+ sq ft, July 2026"],["The Army","9.3% savings, 4× the speed"],["Walmart","8,000 sq ft addition"],["Code","2-hour fire, wind loads up to 100 psf, ESR-4652"]],srcRight:true,
     note:"At one home a week, one Titan prints about 50 homes a year. Our arithmetic from ICON's figure.",src:["program","tech"].concat(v.src||[],["wolf","lennar","bliss","stripes","walmart","wall"])});
   const d0=c.dream[0]||{};
   st.push(c.plan?{act:"The plan",lab:"The site and the next step",scene:"plan",layout:"plan",line:c.ask.line,data:c.plan.data,note:(c.plan.caption||"")+" Select a category to visit it.",legend:true,src:c.plan.src,site:true,by:"short"}
